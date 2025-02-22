@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <img src="astrochart.jpg" alt="Astrology Image" class="framed-image" width="1000" height="400">
+        <h1>Astrology</h1>
+        <form id="astrology-form">
+            <label for="birthdate">Enter your birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+            <label for="birthtime">Enter your birth time:</label>
+            <input type="time" id="birthtime" name="birthtime" required>
+            <label for="birthplace">Enter your birth place:</label>
+            <input type="text" id="birthplace" name="birthplace" required>
+            <button type="submit">Get Horoscope</button>
+        </form>
+        <div id="horoscope-result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
