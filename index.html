@@ -1,30 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astrology</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <img src="astrochart.jpg" alt="Astrology Image" class="framed-image" width="1000" height="400">
-        <h1>Astrology</h1>
-        <form id="astrology-form">
-            <label for="birthdate">Enter your birthdate:</label>
+        <img src="astrochart.jpg" alt="Astrology Image" class="framed-image" width="700" height="400">
+        <h1 class="textcolorlight" id="heading">Astrology</h1>
+        <form id="astrology-form" class="compact-form">
+            <label class="textcolorlight" for="birthdate">Enter your birthdate:</label>
             <input type="date" id="birthdate" name="birthdate" required>
-            <label for="birthtime">Enter your birth time:</label>
-            <input type="time" id="birthtime" name="birthtime" required>
-            <label for="birthplace">Enter your birth place:</label>
-            <input type="text" id="birthplace" name="birthplace" required>
             <button type="submit">Get Horoscope</button>
+            <div class="textcolorlight" id="horoscope-result"></div>
         </form>
-        <div id="horoscope-result"></div>
+       
     </div>
 
+    <section id="additional-info" class="sectionbackground">
+      <div> <h2 class="paddings">Birth Charts</h2>
+        <p>A birth chart is a map of the sky at the exact moment of your birth. It shows the positions of the planets, moon, and sun in the twelve astrological houses.</p></div> 
+        <div>
+        <h2 class="paddings">Sun Signs</h2>
+        <p>Each sun sign is associated with a specific date range and symbol. The twelve signs are:</p>
+        <ol class="no-numbers">
+            <li>♈ Aries</li>
+            <li>♉ Taurus</li>
+            <li>♊ Gemini</li>
+            <li>♋ Cancer</li>
+            <li>♌ Leo</li>
+            <li>♍ Virgo</li>
+            <li>♎ Libra</li>
+            <li>♏ Scorpio</li>
+            <li>♐ Sagittarius</li>
+            <li>♑ Capricorn</li>
+            <li>♒ Aquarius</li>
+            <li>♓ Pisces</li>
+        </ol>
+    </div>
+        <h3 class="paddings">Your sun sign represents</h3>
+        <ul>
+            <li>Your personality: basic traits, motivations, and how you express yourself</li>
+            <li>Identity: Your core essence and the part of your personality that's most visible</li>
+            <li>Drive: Drive, ego, and pride</li>
+            <li>Attitude: Your general outlook and approach to life</li>
+        </ul>
+    </section>
+
+    </body><section>
+    <form action="https://formspree.io/f/{FORM_ID}" class="fs-form compact-form" target="_top" method="POST">
+        <div class="fs-field">
+            <label class="fs-label" for="name">Your Name</label>
+            <input class="fs-input" id="name" name="name" required />
+        </div>
+        <div class="fs-field">
+            <label class="fs-label" for="email">Email</label>
+            <input class="fs-input" id="email" name="email" required />
+            <p class="fs-description">This will help me respond to your query via an email.</p>
+        </div>
+        <div class="fs-field">
+            <label class="fs-label" for="message">Message</label>
+            <textarea class="fs-textarea" id="message" name="message" required></textarea>
+            <p class="fs-description">What would you like to know?</p>
+        </div>
+        <button type="submit">Send</button>
+    </form>
+
     <script src="script.js"></script>
+</section>
 </body>
 </html>
